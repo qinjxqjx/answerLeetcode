@@ -24,6 +24,7 @@ void main(){
 	
 	char *iter = str;
 	char *begin = str, *end = str;
+        //使用while循环更好一点
 	/*while(*end!='\0'){
 		if (*begin == ' '){
 			++begin;
@@ -36,7 +37,7 @@ void main(){
 		}
 		 else ++end;
 	}*/
-
+        //使用for循环同时增加了iter指针，容易出错，直接用begin进行遍历即可
 	for (; *iter != '\0'; ++iter){
 		if (*begin == '\0'){
 			++begin;
