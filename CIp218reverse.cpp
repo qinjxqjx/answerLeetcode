@@ -37,9 +37,10 @@ void main(){
 		}
 		 else ++end;
 	}*/
-        //使用for循环同时增加了iter指针，容易出错，直接用begin进行遍历即可
-	for (; *iter != '\0'; ++iter){
-		if (*begin == '\0'){
+        /*此时更改了for循环的内容，可以发现就是用while实现的，
+	      此外，上一版本中有个问题，if语句中的*begin应该判断是否为空格而不是结尾符号*/
+	for (; *begin != '\0'; ){
+		if (*begin == ' '){
 			++begin;
 			++end;
 		}
